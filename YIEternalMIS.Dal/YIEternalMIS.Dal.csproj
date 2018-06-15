@@ -18,7 +18,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\libs\refbins\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -41,6 +41,14 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="YIEternalMIS.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\libs\refbins\YIEternalMIS.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="YIEternalMIS.Model, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\libs\refbins\YIEternalMIS.Model.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -53,17 +61,9 @@
     <Compile Include="YIESystemMSG.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Common\YIEternalMIS.Common.csproj">
-      <Project>{50896FA4-272C-403E-BDCA-FE6C07C3ED20}</Project>
-      <Name>YIEternalMIS.Common</Name>
-    </ProjectReference>
     <ProjectReference Include="..\DBUtility\DBUtility.csproj">
       <Project>{0988C62E-247F-471F-A183-DB509C7A3839}</Project>
       <Name>DBUtility</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\YIEternalMIS.Model\YIEternalMIS.Model.csproj">
-      <Project>{4C817C2C-E2BF-4F9F-B53F-1DDE4EFFEB36}</Project>
-      <Name>YIEternalMIS.Model</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

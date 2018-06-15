@@ -70,7 +70,29 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="YIEternalMIS.BLL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="YIEternalMIS.Base, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\libs\refbins\YIEternalMIS.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="YIEternalMIS.BLL">
+      <HintPath>..\libs\refbins\YIEternalMIS.BLL.dll</HintPath>
+    </Reference>
+    <Reference Include="YIEternalMIS.Business, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\libs\refbins\YIEternalMIS.Business.dll</HintPath>
+    </Reference>
+    <Reference Include="YIEternalMIS.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\libs\refbins\YIEternalMIS.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="YIEternalMIS.Interfaces, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\libs\refbins\YIEternalMIS.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="YIEternalMIS.Library, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\libs\refbins\YIEternalMIS.Library.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -109,28 +131,6 @@
     <Compile Include="YIEzdglAccont.Designer.cs">
       <DependentUpon>YIEzdglAccont.cs</DependentUpon>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Common\YIEternalMIS.Common.csproj">
-      <Project>{50896FA4-272C-403E-BDCA-FE6C07C3ED20}</Project>
-      <Name>YIEternalMIS.Common</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\YIEternal.Business\YIEternalMIS.Business.csproj">
-      <Project>{64851D27-4139-4933-95AD-1821E87E3BEE}</Project>
-      <Name>YIEternalMIS.Business</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\YIEternalMIS.Base\YIEternalMIS.Base.csproj">
-      <Project>{30307677-4803-467B-8945-2640CF38DFB3}</Project>
-      <Name>YIEternalMIS.Base</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\YIEternalMIS.Interfaces\YIEternalMIS.Interfaces.csproj">
-      <Project>{CDCBF2C8-A840-4362-9AF3-7D47447119B7}</Project>
-      <Name>YIEternalMIS.Interfaces</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\YIEternalMIS.Library\YIEternalMIS.Library.csproj">
-      <Project>{6B2F408C-7ACF-4BC3-927A-9584F9E8B034}</Project>
-      <Name>YIEternalMIS.Library</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\licenses.licx" />

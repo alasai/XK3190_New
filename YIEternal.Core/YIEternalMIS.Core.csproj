@@ -18,7 +18,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\libs\refbins\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -48,6 +48,18 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="YIEternalMIS.BLL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\libs\refbins\YIEternalMIS.BLL.dll</HintPath>
+    </Reference>
+    <Reference Include="YIEternalMIS.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\libs\refbins\YIEternalMIS.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="YIEternalMIS.Interfaces, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\libs\refbins\YIEternalMIS.Interfaces.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="SystemCore\BridgeDataBase.cs" />
@@ -63,21 +75,9 @@
     <Compile Include="SystemCore\YIESysOpenForm.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Common\YIEternalMIS.Common.csproj">
-      <Project>{50896FA4-272C-403E-BDCA-FE6C07C3ED20}</Project>
-      <Name>YIEternalMIS.Common</Name>
-    </ProjectReference>
     <ProjectReference Include="..\DBUtility\DBUtility.csproj">
       <Project>{0988C62E-247F-471F-A183-DB509C7A3839}</Project>
       <Name>DBUtility</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\YIEternalMIS.BLL\YIEternalMIS.BLL.csproj">
-      <Project>{22F1CDAF-4E42-4A74-9A2D-4F6BD3F77A53}</Project>
-      <Name>YIEternalMIS.BLL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\YIEternalMIS.Interfaces\YIEternalMIS.Interfaces.csproj">
-      <Project>{CDCBF2C8-A840-4362-9AF3-7D47447119B7}</Project>
-      <Name>YIEternalMIS.Interfaces</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

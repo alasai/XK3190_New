@@ -54,11 +54,29 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="YIEternalMIS.Base">
+      <HintPath>..\libs\refbins\YIEternalMIS.Base.dll</HintPath>
+    </Reference>
     <Reference Include="YIEternalMIS.BLL">
       <HintPath>..\YIEternalMIS.BLL\bin\Debug\YIEternalMIS.BLL.dll</HintPath>
     </Reference>
-    <Reference Include="YIEternalMIS.Common">
-      <HintPath>..\Common\bin\Debug\YIEternalMIS.Common.dll</HintPath>
+    <Reference Include="YIEternalMIS.Business, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\libs\refbins\YIEternalMIS.Business.dll</HintPath>
+    </Reference>
+    <Reference Include="YIEternalMIS.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\libs\refbins\YIEternalMIS.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="YIEternalMIS.Core">
+      <HintPath>..\libs\refbins\YIEternalMIS.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="YIEternalMIS.Interfaces, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\libs\refbins\YIEternalMIS.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="YIEternalMIS.Library">
+      <HintPath>..\libs\refbins\YIEternalMIS.Library.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -100,7 +118,6 @@
     <EmbeddedResource Include="MainChild.resx">
       <DependentUpon>MainChild.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -124,26 +141,6 @@
     <ProjectReference Include="..\WeightManage.Module\WeightManage.Module.csproj">
       <Project>{e758c074-e3b5-4b7c-a400-b890e7e0ae0b}</Project>
       <Name>WeightManage.Module</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\YIEternal.Business\YIEternalMIS.Business.csproj">
-      <Project>{64851D27-4139-4933-95AD-1821E87E3BEE}</Project>
-      <Name>YIEternalMIS.Business</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\YIEternal.Core\YIEternalMIS.Core.csproj">
-      <Project>{361F74AD-0C4E-4714-9D7C-D38D4FDBCDC9}</Project>
-      <Name>YIEternalMIS.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\YIEternalMIS.Base\YIEternalMIS.Base.csproj">
-      <Project>{30307677-4803-467B-8945-2640CF38DFB3}</Project>
-      <Name>YIEternalMIS.Base</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\YIEternalMIS.Interfaces\YIEternalMIS.Interfaces.csproj">
-      <Project>{CDCBF2C8-A840-4362-9AF3-7D47447119B7}</Project>
-      <Name>YIEternalMIS.Interfaces</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\YIEternalMIS.Library\YIEternalMIS.Library.csproj">
-      <Project>{6B2F408C-7ACF-4BC3-927A-9584F9E8B034}</Project>
-      <Name>YIEternalMIS.Library</Name>
     </ProjectReference>
     <ProjectReference Include="..\YIEternalMIS.SystemModule\YIEternalMIS.SystemModule.csproj">
       <Project>{B70290F6-0355-4798-AD19-279FBCDFDF5A}</Project>

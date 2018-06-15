@@ -69,10 +69,11 @@
             this.WeightTime = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnClearTags = new DevExpress.XtraEditors.SimpleButton();
-            this.richTxtTags = new System.Windows.Forms.RichTextBox();
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.weightLabel = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
+            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.richTxtTags = new System.Windows.Forms.RichTextBox();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtNumber)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -80,10 +81,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
+            this.panelControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox2.AutoSize = true;
             this.groupBox2.Controls.Add(this.txtNumber);
             this.groupBox2.Controls.Add(this.btnSaveData);
@@ -95,7 +100,7 @@
             this.groupBox2.Controls.Add(this.txtPi);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox2.Location = new System.Drawing.Point(613, 103);
+            this.groupBox2.Location = new System.Drawing.Point(639, 105);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(297, 349);
             this.groupBox2.TabIndex = 5;
@@ -328,7 +333,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.AutoSize = true;
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox1.Controls.Add(this.btnEnd);
             this.groupBox1.Controls.Add(this.btnStart);
             this.groupBox1.Controls.Add(this.txtTel);
@@ -343,24 +349,23 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.groupBox1.Location = new System.Drawing.Point(9, 103);
+            this.groupBox1.Location = new System.Drawing.Point(4, 106);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(598, 349);
+            this.groupBox1.Size = new System.Drawing.Size(630, 350);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "人员信息";
             // 
             // gridWeight
             // 
-            this.gridWeight.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.gridWeight.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.gridWeight.Location = new System.Drawing.Point(12, 494);
+            this.gridWeight.Location = new System.Drawing.Point(4, 498);
             this.gridWeight.MainView = this.gridView1;
             this.gridWeight.Name = "gridWeight";
             this.gridWeight.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit1});
-            this.gridWeight.Size = new System.Drawing.Size(1238, 198);
+            this.gridWeight.Size = new System.Drawing.Size(1248, 201);
             this.gridWeight.TabIndex = 6;
             this.gridWeight.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -502,13 +507,14 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.Controls.Add(this.btnClearTags);
             this.groupBox3.Controls.Add(this.richTxtTags);
-            this.groupBox3.Location = new System.Drawing.Point(916, 103);
+            this.groupBox3.Location = new System.Drawing.Point(949, 105);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(330, 349);
+            this.groupBox3.Size = new System.Drawing.Size(282, 349);
             this.groupBox3.TabIndex = 7;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "标签信息";
@@ -529,22 +535,14 @@
             this.btnClearTags.Name = "btnClearTags";
             this.btnClearTags.Size = new System.Drawing.Size(88, 26);
             this.btnClearTags.TabIndex = 16;
-            this.btnClearTags.Text = "清除数据";
+            this.btnClearTags.Text = "清除";
             this.btnClearTags.Click += new System.EventHandler(this.btnClearTags_Click);
-            // 
-            // richTxtTags
-            // 
-            this.richTxtTags.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.richTxtTags.Location = new System.Drawing.Point(3, 56);
-            this.richTxtTags.Name = "richTxtTags";
-            this.richTxtTags.Size = new System.Drawing.Size(324, 290);
-            this.richTxtTags.TabIndex = 0;
-            this.richTxtTags.Text = "";
             // 
             // btnCancel
             // 
+            this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
-            this.btnCancel.Location = new System.Drawing.Point(12, 458);
+            this.btnCancel.Location = new System.Drawing.Point(5, 462);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(83, 30);
             this.btnCancel.TabIndex = 8;
@@ -558,9 +556,9 @@
             this.weightLabel.BackColor = System.Drawing.Color.Black;
             this.weightLabel.Font = new System.Drawing.Font("微软雅黑", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.weightLabel.ForeColor = System.Drawing.Color.Crimson;
-            this.weightLabel.Location = new System.Drawing.Point(447, 0);
+            this.weightLabel.Location = new System.Drawing.Point(377, -3);
             this.weightLabel.Name = "weightLabel";
-            this.weightLabel.Size = new System.Drawing.Size(387, 100);
+            this.weightLabel.Size = new System.Drawing.Size(417, 100);
             this.weightLabel.TabIndex = 9;
             this.weightLabel.Text = "0.00";
             this.weightLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -569,25 +567,45 @@
             // 
             this.lblName.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblName.Location = new System.Drawing.Point(9, 67);
+            this.lblName.Location = new System.Drawing.Point(5, 49);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(323, 33);
             this.lblName.TabIndex = 10;
             this.lblName.Text = "当前称重：";
             this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // panelControl1
+            // 
+            this.panelControl1.Controls.Add(this.weightLabel);
+            this.panelControl1.Controls.Add(this.gridWeight);
+            this.panelControl1.Controls.Add(this.btnCancel);
+            this.panelControl1.Controls.Add(this.lblName);
+            this.panelControl1.Controls.Add(this.groupBox1);
+            this.panelControl1.Controls.Add(this.groupBox3);
+            this.panelControl1.Controls.Add(this.groupBox2);
+            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControl1.Location = new System.Drawing.Point(0, 0);
+            this.panelControl1.Name = "panelControl1";
+            this.panelControl1.Size = new System.Drawing.Size(1258, 704);
+            this.panelControl1.TabIndex = 11;
+            // 
+            // richTxtTags
+            // 
+            this.richTxtTags.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.richTxtTags.Location = new System.Drawing.Point(3, 56);
+            this.richTxtTags.Name = "richTxtTags";
+            this.richTxtTags.Size = new System.Drawing.Size(273, 287);
+            this.richTxtTags.TabIndex = 0;
+            this.richTxtTags.Text = "";
+            // 
             // WeightForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1258, 704);
-            this.Controls.Add(this.lblName);
-            this.Controls.Add(this.weightLabel);
-            this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.gridWeight);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.panelControl1);
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "WeightForm";
             this.Text = "称重管理";
@@ -602,8 +620,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
             this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
+            this.panelControl1.ResumeLayout(false);
+            this.panelControl1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -638,7 +658,6 @@
         private System.Windows.Forms.NumericUpDown txtNumber;
         private System.Windows.Forms.GroupBox groupBox3;
         private DevExpress.XtraEditors.SimpleButton btnClearTags;
-        private System.Windows.Forms.RichTextBox richTxtTags;
         private DevExpress.XtraGrid.Columns.GridColumn Id;
         private DevExpress.XtraGrid.Columns.GridColumn ProductName;
         private DevExpress.XtraGrid.Columns.GridColumn Price;
@@ -653,5 +672,7 @@
         private DevExpress.XtraEditors.SimpleButton btnCancel;
         private System.Windows.Forms.Label weightLabel;
         private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.RichTextBox richTxtTags;
+        private DevExpress.XtraEditors.PanelControl panelControl1;
     }
 }
