@@ -1,0 +1,11 @@
+﻿|DevExpress Style|Caramel|Money Twins|DevExpress Dark Style|iMaginary
+
+|Lilian|Black|Blue|Office 2010 Blue|Office 2010 Black|Office 2010 Silver
+
+|Office 2007 Blue|Office 2007 Black|Officmetre 2007 Silver|Office 2007 Green
+
+|Office 2007 Pink|Seven|Seven Classic|Darkroom|McSkin|Sharp|Sharp Plus
+
+|Foggy|Dark Side|Xmas (Blue)|Springtime|Summer|Pumpkin|Valentine|Stardust
+
+|Coffee|Glass Oceans|High Contrast|Liquid Sky|London Liquid Sky|The Asphalt World|Blueprint|

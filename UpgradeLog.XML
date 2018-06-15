@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="YIEternalMIS">
+</Property><Property Name="解决方案文件" Value="F:\YIEternalManager\YIEternalMIS\YIEternalMIS.sln">
+</Property><Property Name="Date" Value="2017年6月24日 星期六">
+</Property><Property Name="Time" Value="16:07:54">
+</Property></Properties><Event ErrorLevel="0" Project="WinPager" Source="..\..\Dev\WinPager\WinPager.csproj" Description="项目文件已成功备份为 F:\YIEternalManager\YIEternalMIS\Backup\WinPager.csproj">
+</Event><Event ErrorLevel="0" Project="WinPager" Source="..\..\Dev\WinPager\Control\PagerControl.cs" Description="文件已成功备份为 F:\YIEternalManager\YIEternalMIS\Backup\Control\PagerControl.cs">
+</Event><Event ErrorLevel="0" Project="WinPager" Source="..\..\Dev\WinPager\Control\PagerControl.designer.cs" Description="文件已成功备份为 F:\YIEternalManager\YIEternalMIS\Backup\Control\PagerControl.designer.cs">
+</Event><Event ErrorLevel="0" Project="WinPager" Source="..\..\Dev\WinPager\StartForm.cs" Description="文件已成功备份为 F:\YIEternalManager\YIEternalMIS\Backup\StartForm.cs">
+</Event><Event ErrorLevel="0" Project="WinPager" Source="..\..\Dev\WinPager\StartForm.Designer.cs" Description="文件已成功备份为 F:\YIEternalManager\YIEternalMIS\Backup\StartForm.Designer.cs">
+</Event><Event ErrorLevel="0" Project="WinPager" Source="..\..\Dev\WinPager\Program.cs" Description="文件已成功备份为 F:\YIEternalManager\YIEternalMIS\Backup\Program.cs">
+</Event><Event ErrorLevel="0" Project="WinPager" Source="..\..\Dev\WinPager\Properties\AssemblyInfo.cs" Description="文件已成功备份为 F:\YIEternalManager\YIEternalMIS\Backup\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="WinPager" Source="..\..\Dev\WinPager\Properties\Resources.Designer.cs" Description="文件已成功备份为 F:\YIEternalManager\YIEternalMIS\Backup\Properties\Resources.Designer.cs">
+</Event><Event ErrorLevel="0" Project="WinPager" Source="..\..\Dev\WinPager\Properties\Settings.Designer.cs" Description="文件已成功备份为 F:\YIEternalManager\YIEternalMIS\Backup\Properties\Settings.Designer.cs">
+</Event><Event ErrorLevel="0" Project="WinPager" Source="..\..\Dev\WinPager\Properties\Settings.settings" Description="文件已成功备份为 F:\YIEternalManager\YIEternalMIS\Backup\Properties\Settings.settings">
+</Event><Event ErrorLevel="0" Project="WinPager" Source="..\..\Dev\WinPager\Control\PagerControl.resx" Description="文件已成功备份为 F:\YIEternalManager\YIEternalMIS\Backup\Control\PagerControl.resx">
+</Event><Event ErrorLevel="0" Project="WinPager" Source="..\..\Dev\WinPager\StartForm.resx" Description="文件已成功备份为 F:\YIEternalManager\YIEternalMIS\Backup\StartForm.resx">
+</Event><Event ErrorLevel="0" Project="WinPager" Source="..\..\Dev\WinPager\Properties\Resources.resx" Description="文件已成功备份为 F:\YIEternalManager\YIEternalMIS\Backup\Properties\Resources.resx">
+</Event><Event ErrorLevel="1" Project="WinPager" Source="..\..\Dev\WinPager\WinPager.csproj" Description="您的项目以 .NET Framework 2.0 或 3.0 为目标。如果您的项目使用的程序集需要更新的 .NET Framework，则项目生成将失败。通过单击项目菜单上的“属性”，然后在“.NET Framework”下拉框中选择一个新版本，可以更改 .NET Framework 的版本。(在 Visual Basic 中，可在单击“高级编辑器选项...”按钮时显示的“编译”选项卡上找到此下拉框。)">
+</Event><Event ErrorLevel="0" Project="WinPager" Source="..\..\Dev\WinPager\WinPager.csproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="WinPager" Source="..\..\Dev\WinPager\WinPager.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="WinPager" Source="..\..\Dev\WinPager\WinPager.csproj" Description="扫描完成: 项目文件不需要升级。">
+</Event></UpgradeLog>

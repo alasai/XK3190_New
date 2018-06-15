@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D663F469-F533-474C-AACF-3DB11C73D9E2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>YIEternalMIS.Main</RootNamespace>
+    <AssemblyName>YIEternalMIS.Main</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v15.1, Version=15.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v15.1.Core, Version=15.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v15.1.Core, Version=15.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v15.1, Version=15.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v15.1, Version=15.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v15.1, Version=15.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v15.1, Version=15.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v15.1, Version=15.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v15.1, Version=15.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v15.1, Version=15.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v15.1, Version=15.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="YIEternalMIS.BLL">
+      <HintPath>..\YIEternalMIS.BLL\bin\Debug\YIEternalMIS.BLL.dll</HintPath>
+    </Reference>
+    <Reference Include="YIEternalMIS.Common">
+      <HintPath>..\Common\bin\Debug\YIEternalMIS.Common.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LoginFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginFrm.Designer.cs">
+      <DependentUpon>LoginFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainChild.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainChild.Designer.cs">
+      <DependentUpon>MainChild.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="YIEMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YIEMain.Designer.cs">
+      <DependentUpon>YIEMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YIESetOfBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YIESetOfBooks.Designer.cs">
+      <DependentUpon>YIESetOfBooks.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="LoginFrm.resx">
+      <DependentUpon>LoginFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainChild.resx">
+      <DependentUpon>MainChild.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YIEMain.resx">
+      <DependentUpon>YIEMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YIESetOfBooks.resx">
+      <DependentUpon>YIESetOfBooks.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AppService\AppService.csproj">
+      <Project>{22edacac-530e-4383-89cb-fc8ceb4916ed}</Project>
+      <Name>AppService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Models\Models.csproj">
+      <Project>{9d0568a9-a3f3-4ab6-a4a1-cd06fce731ce}</Project>
+      <Name>Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WeightManage.Module\WeightManage.Module.csproj">
+      <Project>{e758c074-e3b5-4b7c-a400-b890e7e0ae0b}</Project>
+      <Name>WeightManage.Module</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YIEternal.Business\YIEternalMIS.Business.csproj">
+      <Project>{64851D27-4139-4933-95AD-1821E87E3BEE}</Project>
+      <Name>YIEternalMIS.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YIEternal.Core\YIEternalMIS.Core.csproj">
+      <Project>{361F74AD-0C4E-4714-9D7C-D38D4FDBCDC9}</Project>
+      <Name>YIEternalMIS.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YIEternalMIS.Base\YIEternalMIS.Base.csproj">
+      <Project>{30307677-4803-467B-8945-2640CF38DFB3}</Project>
+      <Name>YIEternalMIS.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YIEternalMIS.Interfaces\YIEternalMIS.Interfaces.csproj">
+      <Project>{CDCBF2C8-A840-4362-9AF3-7D47447119B7}</Project>
+      <Name>YIEternalMIS.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YIEternalMIS.Library\YIEternalMIS.Library.csproj">
+      <Project>{6B2F408C-7ACF-4BC3-927A-9584F9E8B034}</Project>
+      <Name>YIEternalMIS.Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YIEternalMIS.SystemModule\YIEternalMIS.SystemModule.csproj">
+      <Project>{B70290F6-0355-4798-AD19-279FBCDFDF5A}</Project>
+      <Name>YIEternalMIS.SystemModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YIEternalMIS.Tools.SqlConnector\YIEternalMIS.Tools.SqlConnector.csproj">
+      <Project>{b9d9795d-24c1-4d38-8de5-a7a4c10ff24d}</Project>
+      <Name>YIEternalMIS.Tools.SqlConnector</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="皮肤.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
