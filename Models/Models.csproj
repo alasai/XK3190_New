@@ -51,9 +51,11 @@
     <Compile Include="Db\Params.cs" />
     <Compile Include="Db\PostDeAcid.cs" />
     <Compile Include="Db\PreDeAcid.cs" />
-    <Compile Include="Db\ProductModel.cs" />
+    <Compile Include="Db\Products.cs" />
     <Compile Include="Db\Weighings.cs" />
     <Compile Include="Db\WeighingsRaw.cs" />
+    <Compile Include="Dto\GlobalWeightParams.cs" />
+    <Compile Include="Dto\WeightBatchDto.cs" />
     <Compile Include="Dto\WeightInitDto.cs" />
     <Compile Include="SqliteModel\HeadHooks.cs" />
     <Compile Include="SqliteModel\WeightGridDto.cs" />

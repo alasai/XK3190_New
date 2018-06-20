@@ -127,10 +127,12 @@ namespace YIEternalMIS.Core
             FormAssembly =menu.OpenAssembly;
             FormImage16 = Globals.LoadImage(menu.Icon, 16);
             FormImage32 = Globals.LoadImage(menu.Icon, 32);
-            sOpenType ="1";
-            if (sOpenType == "1") FormOpenType = Common.FormOpenType.MdiOpen;
-            else if (sOpenType == "2") FormOpenType = Common.FormOpenType.DiaLogOpen;
-            else if (sOpenType == "3") FormOpenType = Common.FormOpenType.DefaultOpen;
+            //sOpenType =menu.OpenType;
+            //if (sOpenType == "1") FormOpenType = Common.FormOpenType.MdiOpen;
+            //else if (sOpenType == "2") FormOpenType = Common.FormOpenType.DiaLogOpen;
+            //else if (sOpenType == "3") FormOpenType = Common.FormOpenType.DefaultOpen;
+
+            FormOpenType = Common.FormOpenType.MdiOpen;
             FormTag = MenuNewID;
 
 

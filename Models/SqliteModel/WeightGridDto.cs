@@ -14,6 +14,7 @@ namespace Models
         public string Id { get; set; }
         public string BatchId { get; set; }
         public int SerialNum { get; set; }
+        public string Name { get; set; }
         public string IdNumber { get; set; }
         public decimal Price { get; set; }
         public int Num { get; set; }
@@ -23,5 +24,9 @@ namespace Models
         public decimal NetWeight { get; set; }
         public decimal TotalPrice { get; set; }
         public DateTime WeightTime { get; set; }
+        /// <summary>
+        /// 是否已经提交到服务器
+        /// </summary>
+        public int Uploadflag { get; set; }
     }
 }

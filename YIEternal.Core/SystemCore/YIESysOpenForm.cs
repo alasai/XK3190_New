@@ -42,8 +42,8 @@ namespace YIEternalMIS.Core
         {
             if (FormModule == null) return;
             //窗口是否已经打开
-            if (FormIsOpen(FormModule)) return;
-
+            //if (FormIsOpen(FormModule)) return;
+            if (FormIsOpenNew(FormModule)) return;
             //窗口打开类型
             //FormOpen = FormModule.FormOpenType;
 
@@ -94,7 +94,28 @@ namespace YIEternalMIS.Core
             }
             return false;
         }
-
+        public bool FormIsOpenNew(IOpenModuleForm FormModule)
+        {
+            // 是否已经打开了？（用循环来判断）
+            foreach (Form childrenForm in MainFormMDI.MainMDIForm.MdiChildren)
+            {
+                if (childrenForm.Tag != null)
+                {
+                    if (childrenForm.Tag.ToString() == FormModule.FormTag)
+                    {
+                        //是的话就是把他显示
+                        childrenForm.Visible = true;
+                        //并激活该窗体
+                        childrenForm.Activate();
+                        return true;
+                    }
+                }
+               // childrenForm.Tag.ToString();
+                //检测是不是当前子窗体名称
+                
+            }
+            return false;
+        }
         /// <summary>
         /// 窗口打开方法，
         /// </summary>
@@ -118,7 +139,7 @@ namespace YIEternalMIS.Core
                 System.Reflection.Assembly asm = System.Reflection.Assembly.Load(IOpenForm.FormAssembly);//程序集名
                 object frmObj = asm.CreateInstance(IOpenForm.FormAssembly + "." + IOpenForm.FormName);//程序集+form的类名。
                 Form childForm = (Form)frmObj;
-                //childForm.Tag = e.Link.Item.Tag.ToString();  //tag属性要重新写一次，否则在第二次的时候取不到。原因还不清楚。有知道的望告知。
+                childForm.Tag = IOpenForm.FormTag;  //tag属性要重新写一次，否则在第二次的时候取不到。原因还不清楚。有知道的望告知。
                 childForm.MdiParent = MainFormMDI.MainMDIForm;
                 childForm.Show();
                 MainFormMDI.MainTabManager.Pages[childForm].Image = IOpenForm.FormImage16;

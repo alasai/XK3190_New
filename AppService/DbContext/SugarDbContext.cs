@@ -16,7 +16,7 @@ namespace AppService.DbContext
 
         }
 
-        public static SqlSugarClient SugarContext = null;
+        private static SqlSugarClient SugarContext = null;
         private static string ConnectionString
         {
             get
@@ -41,7 +41,7 @@ namespace AppService.DbContext
             return SugarContext;
         }
 
-        public static void Dispose()
+        private static void Dispose()
         {
             try
             {

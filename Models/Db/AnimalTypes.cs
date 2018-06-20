@@ -13,7 +13,7 @@ namespace Models.Db
         [SugarColumn(IsPrimaryKey = true, IsIdentity = true)]
         public int animalTypeId { get; set; }
         public string animalTypeName { get; set; }
-        public decimal? price { get; set; }
+        public decimal price { get; set; }
         public string traceCode { get; set; }
     }
 }

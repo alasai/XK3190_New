@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.IO.Ports;
 using System.Linq;
 using System.Text;
@@ -19,6 +20,7 @@ using Utils;
 using Utils.DataId;
 using WeightManage.Module.SerialPortUtil;
 using WeightManage.Module.ViewModel;
+using WeightManage.Module.Views.FactoryInfo;
 using YIEternalMIS.Base;
 using YIEternalMIS.Common;
 
@@ -30,6 +32,9 @@ namespace WeightManage.Module
         public WeightForm()
         {
             InitializeComponent();
+            //GraphicsPath path = new GraphicsPath();
+            //path.AddEllipse(0, 0, this.Width, this.Height);
+            //btnSingle.Region = new Region(path);
             InitMvvm();
         }
         /// <summary>
@@ -183,6 +188,7 @@ namespace WeightManage.Module
         {
 
             ViewModel.MaoWeight = e.DataReceived;
+            btnSingle.BackColor = Color.Green;
             this.richTxtTags.Invoke(new MethodInvoker(delegate
             {
                 this.richTxtTags.AppendText(e.DataReceived + ";");
@@ -320,7 +326,7 @@ namespace WeightManage.Module
                 comboProduct.ValueMember = "animalTypeId";
                 comboProduct.DataSource = _weightInitDto.Products;
                 var price = _weightInitDto.Products.OrderBy(s => s.animalTypeId).Select(s => s.price).FirstOrDefault();
-                ViewModel.Price = price ?? 0.00M;
+                ViewModel.Price = price;
             }
             catch (Exception e)
             {
@@ -411,8 +417,35 @@ namespace WeightManage.Module
             }
             if (Msg.AskQuestion("确定完成称重？"))
             {
-                ViewModel.Reset();
-                Msg.ShowInformation("结束称重");
+                var unUploadWeights = _sqliteApp.GetUnUploadWeights(ViewModel.BatchId.Trim());
+                bool leftDataSave = false;
+                if (unUploadWeights.Any())
+                {
+                    foreach (var dto in unUploadWeights)
+                    {
+                        leftDataSave = SaveDataToServer(dto);
+                        if (!leftDataSave)
+                        {
+                            break;
+                        }
+                    }
+                }
+                if (!leftDataSave)
+                {
+                    Msg.ShowError("完成失败,有部分数据没有提交成功，请联系管理员");
+                    return;
+                }
+                var ret = _weightApp.CompleteWeight(ViewModel.BatchId.Trim());
+                if (ret)
+                {
+                    ViewModel.Reset();
+                    Msg.ShowInformation("称重完成");
+                }
+                else
+                {
+                    Msg.ShowError("完成失败，请联系管理员");
+                }
+                
             }
            
         }
@@ -448,6 +481,7 @@ namespace WeightManage.Module
             _weightGridDto.BatchId =ViewModel.BatchId.Trim();
             _weightGridDto.SerialNum = ViewModel.WeightGridRowCount;
             _weightGridDto.IdNumber = ViewModel.IdNumber.Trim();
+            _weightGridDto.Name = ViewModel.Name.Trim();
             _weightGridDto.ProductName = comboProduct.Text;
             _weightGridDto.Num = ViewModel.Num;
             _weightGridDto.MaoWeight = ViewModel.MaoWeight;
@@ -478,31 +512,38 @@ namespace WeightManage.Module
         /// 将数据提交到服务器数据库
         /// </summary>
         /// <param name="dto"></param>
-        private void SaveDataToServer(WeightGridDto dto)
+        private bool SaveDataToServer(WeightGridDto dto)
         {
-            if (string.IsNullOrEmpty(dto.Id))
-            {
-                Msg.ShowInformation("没有数据需要提交");
-            }
-            else
+            if (!string.IsNullOrEmpty(dto.Id))
             {
                 //获取称重勾标
-                var hooks = _sqliteApp.GetWeightHooks(dto.Num,dto.WeightTime);
+                var hooks = _sqliteApp.GetWeightHooks(dto.Num, dto.WeightTime);
                 try
                 {
                     //保存数据到服务器
-                    bool ret= _weightApp.SaveDataToServer(hooks, ViewModel.IsTrace, dto);
+                    bool ret = _weightApp.SaveDataToServer(hooks, ViewModel.IsTrace, dto);
                     if (!ret)
                     {
                         Msg.ShowError("数据提交到服务器失败，请联系管理员");
+                        _weightGridList.RemoveAt(0);
+                        _sqliteApp.DelLocalWeightById(dto.Id);
                     }
+
+                    return ret;
                 }
                 catch (Exception e)
                 {
-                   LogNHelper.Exception(e);
+                    LogNHelper.Exception(e);
                     Msg.ShowError("数据提交到服务器失败,请联系管理员");
                 }
+              
             }
+            //else
+            //{
+            //    Msg.ShowInformation("没有数据需要提交");
+            //}
+
+            return false;
         }
         /// <summary>
         /// 标签文本框清空
@@ -563,12 +604,57 @@ namespace WeightManage.Module
         {
             int animalType = (int)comboProduct.SelectedValue;
             var price = _weightInitDto.Products.Where(s => s.animalTypeId == animalType).Select(s => s.price).FirstOrDefault();
-            ViewModel.Price = price ?? 0M;
+            ViewModel.Price = price;
         }
+
 
         #endregion
 
 
+        /// <summary>
+        /// 串口设置
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnSerialPort_Click(object sender, EventArgs e)
+        {
+
+        }
+        /// <summary>
+        /// 毛重设置
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnMao_Click(object sender, EventArgs e)
+        {
+            if (HookWeightForm.SetHookWeight())
+            {
+                
+                ViewModel.PiWeight = HookWeightForm.HooksWeight;
+                ViewModel.Num = HookWeightForm.HookCount;
+                ViewModel.HookNum = ViewModel.Num;
+            }
+            //else
+            //{
+            //    Msg.ShowError("失败");
+            //}
+        }
+
+        /// <summary>
+        /// 刷新货物列表
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnRefreshProduct_Click(object sender, EventArgs e)
+        {
+            var list = _weightApp.GetProduct();
+            _weightInitDto.Products = list;
+            comboProduct.DisplayMember = "animalTypeName";
+            comboProduct.ValueMember = "animalTypeId";
+            comboProduct.DataSource = list;
+            var price = list.OrderBy(s => s.animalTypeId).Select(s => s.price).FirstOrDefault();
+            ViewModel.Price = price;
+        }
     }
 
 

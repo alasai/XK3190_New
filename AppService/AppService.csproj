@@ -54,9 +54,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DbContext\SqliteDbContext.cs" />
+    <Compile Include="FactoryAppService.cs" />
     <Compile Include="LoginAppService.cs" />
     <Compile Include="DbContext\SugarDbContext.cs" />
+    <Compile Include="PriceAppService.cs" />
+    <Compile Include="ProductAppService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportAppService.cs" />
     <Compile Include="SqliteAppService.cs" />
     <Compile Include="WeightAppService.cs" />
   </ItemGroup>

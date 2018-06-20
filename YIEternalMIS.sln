@@ -47,6 +47,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeightManage.Module", "Weig
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utils", "Utils\Utils.csproj", "{FAF834AA-2D6F-40DD-A0CD-C0E771AA3448}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Module", "Test.Module\Test.Module.csproj", "{0A1CDB30-7BE7-437F-A28F-09CB63040E04}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -125,6 +127,10 @@ Global
 		{FAF834AA-2D6F-40DD-A0CD-C0E771AA3448}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FAF834AA-2D6F-40DD-A0CD-C0E771AA3448}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FAF834AA-2D6F-40DD-A0CD-C0E771AA3448}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A1CDB30-7BE7-437F-A28F-09CB63040E04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A1CDB30-7BE7-437F-A28F-09CB63040E04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A1CDB30-7BE7-437F-A28F-09CB63040E04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A1CDB30-7BE7-437F-A28F-09CB63040E04}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -148,6 +154,7 @@ Global
 		{9D0568A9-A3F3-4AB6-A4A1-CD06FCE731CE} = {4D41D7E2-CE99-44F0-AA01-E1E4792368F8}
 		{E758C074-E3B5-4B7C-A400-B890E7E0AE0B} = {4D41D7E2-CE99-44F0-AA01-E1E4792368F8}
 		{FAF834AA-2D6F-40DD-A0CD-C0E771AA3448} = {4D41D7E2-CE99-44F0-AA01-E1E4792368F8}
+		{0A1CDB30-7BE7-437F-A28F-09CB63040E04} = {4D41D7E2-CE99-44F0-AA01-E1E4792368F8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A9E8CE00-FA43-4737-BFA5-E8DC5497FA5A}

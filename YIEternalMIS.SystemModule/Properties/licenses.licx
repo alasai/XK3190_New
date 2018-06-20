@@ -1,9 +1,0 @@
-DevExpress.Patch.InMemoryPatch, DevExpress.Patch.Common, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7fc7bfca2443de66
-DevExpress.XtraEditors.Repository.RepositoryItemComboBox, DevExpress.XtraEditors.v15.1, Version=15.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
-DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit, DevExpress.XtraEditors.v15.1, Version=15.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
-DevExpress.XtraEditors.Repository.RepositoryItemDateEdit, DevExpress.XtraEditors.v15.1, Version=15.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
-DevExpress.XtraEditors.ButtonEdit, DevExpress.XtraEditors.v15.1, Version=15.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
-DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v15.1, Version=15.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
-DevExpress.XtraGrid.GridControl, DevExpress.XtraGrid.v15.1, Version=15.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
-DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit, DevExpress.XtraEditors.v15.1, Version=15.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
-DevExpress.XtraLayout.LayoutControl, DevExpress.XtraLayout.v15.1, Version=15.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a

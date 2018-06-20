@@ -85,7 +85,8 @@ namespace YIEternalMIS.Main
             }
             //登录成功
             Loginer.CurrentUser = user;
-            GetMenus();
+            //初始化导航条
+            MenuHelper.InitMenu();
             DialogResult = System.Windows.Forms.DialogResult.OK;
             //登录策略
             //Business.LoginAuthorization login = new Business.LoginAuthorization();
@@ -127,7 +128,8 @@ namespace YIEternalMIS.Main
             //登录成功
             if (LoginAuthor(LoginUser, login))
             {
-                GetMenus();
+                //初始化导航条
+                MenuHelper.InitMenu();
                 DialogResult = System.Windows.Forms.DialogResult.OK;
                 //登录策略
                 SystemAuthentication.Current = login;
@@ -153,18 +155,6 @@ namespace YIEternalMIS.Main
         private void sbtnNew_Click(object sender, EventArgs e)
         {
             frmSQLConnector.ExecuteConnection();
-        }
-        private void GetMenus()
-        {
-            var list = new List<MenuListDto>();
-
-            list.Add(new MenuListDto() { MenuId = "1", MenuName = "zdgl", MenuPid = "0", MenuSort = 1, MenuText = "字典管理", Icon = "Format" });
-            list.Add(new MenuListDto() { MenuId = "2", MenuName = "2", MenuPid = "1", MenuSort = 1, MenuText = "基础字典", Icon = "Format" });
-            list.Add(new MenuListDto() { MenuId = "3", MenuName = "3", MenuPid = "2", MenuSort = 1, MenuText = "字典管理", Icon = "Format", OpenAssembly = "YIEternalMIS.SystemModule", OpenFormClassName = "YIEMsgForm" });
-
-            list.Add(new MenuListDto() { MenuId = "4", MenuName = "4", MenuPid = "2", MenuSort = 1, MenuText = "称重管理", Icon = "Format", OpenAssembly = "WeightManage.Module", OpenFormClassName = "WeightForm" });
-
-            SystemAuthentication.SystemMenuList = list;
         }
     }
 }

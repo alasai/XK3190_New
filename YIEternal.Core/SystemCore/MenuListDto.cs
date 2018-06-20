@@ -15,5 +15,10 @@ public class MenuListDto
         public int MenuSort { get; set; }
         public string OpenAssembly { get; set; }
         public string OpenFormClassName { get; set; }
+
+        /// <summary>
+        /// 1-MdiOpen,2-DiaLogOpen,3-DefaultOpen
+        /// </summary>
+        public string OpenType { get; set; } ="1";
     }
 }

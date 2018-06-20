@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using SqlSugar;
 
 namespace Models.Db
 {
-    public class ProductModel
+    public class Products
     {
+        [SugarColumn(IsPrimaryKey =true,IsIdentity =true)]
         public int productId { get; set; }
         public string productName { get; set; }
 
@@ -20,6 +22,9 @@ namespace Models.Db
         public string storageCondition { get;set; }
 
         public bool isBoned { get; set; }
+
+        public string shortName { get; set; }
+        [SugarColumn(IsIgnore = true)]
         public string isfixedStr { get { return isFixedWeight ? "是" : "否"; } }
     }
 }

@@ -119,6 +119,9 @@
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="TinyMapper, Version=2.0.0.40, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\TinyMapper.2.0.8\lib\net45\TinyMapper.dll</HintPath>
+    </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="YIEternalMIS.Base, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -158,19 +161,63 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SerialPortUtil\ElectronicScale.cs" />
     <Compile Include="SerialPortUtil\SerialPortUtil.cs" />
+    <Compile Include="ViewModel\FactoryVm.cs" />
     <Compile Include="ViewModel\PersonInfoVm.cs" />
+    <Compile Include="ViewModel\ProductsVm.cs" />
     <Compile Include="ViewModel\WeightInfoVm.cs" />
+    <Compile Include="Views\FactoryInfo\FactoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FactoryInfo\FactoryForm.Designer.cs">
+      <DependentUpon>FactoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FactoryInfo\HookWeightForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FactoryInfo\HookWeightForm.Designer.cs">
+      <DependentUpon>HookWeightForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Price\PriceEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Price\PriceEditForm.Designer.cs">
+      <DependentUpon>PriceEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Price\PriceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Price\PriceForm.Designer.cs">
+      <DependentUpon>PriceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Product\ProductEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Product\ProductEditForm.Designer.cs">
+      <DependentUpon>ProductEditForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Product\ProductForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\Product\ProductForm.Designer.cs">
       <DependentUpon>ProductForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Report\ReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Report\ReportForm.Designer.cs">
+      <DependentUpon>ReportForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="WeightForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="WeightForm.Designer.cs">
       <DependentUpon>WeightForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WeightReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WeightReportForm.Designer.cs">
+      <DependentUpon>WeightReportForm.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -189,8 +236,32 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Views\FactoryInfo\FactoryForm.resx">
+      <DependentUpon>FactoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FactoryInfo\HookWeightForm.resx">
+      <DependentUpon>HookWeightForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Price\PriceEditForm.resx">
+      <DependentUpon>PriceEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Price\PriceForm.resx">
+      <DependentUpon>PriceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Product\ProductEditForm.resx">
+      <DependentUpon>ProductEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Product\ProductForm.resx">
+      <DependentUpon>ProductForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Report\ReportForm.resx">
+      <DependentUpon>ReportForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WeightForm.resx">
       <DependentUpon>WeightForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WeightReportForm.resx">
+      <DependentUpon>WeightReportForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="packages.config" />
@@ -229,6 +300,34 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Axgregn6Lib">
+      <Guid>{4018F953-1BFE-441E-8A04-DC8BA1FF060E}</Guid>
+      <VersionMajor>6</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="gregn6Lib">
+      <Guid>{4018F953-1BFE-441E-8A04-DC8BA1FF060E}</Guid>
+      <VersionMajor>6</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
