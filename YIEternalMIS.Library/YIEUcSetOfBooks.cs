@@ -7,7 +7,7 @@ using System.Text;
 using System.Linq;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
-using YIEternalMIS.BLL;
+
 
 namespace YIEternalMIS.Library
 {
@@ -33,8 +33,8 @@ namespace YIEternalMIS.Library
             txtOperator.Properties.ValueMember = "DataSetID";
             txtOperator.Properties.DisplayMember = "DataSetName";
             txtOperator.Properties.NullText = "请选择登陆账套";
-            DataTable DTSource = new tb_DataSet().GetAllList().Tables[0];
-            txtOperator.Properties.DataSource = DTSource;
+            //DataTable DTSource = new tb_DataSet().GetAllList().Tables[0];
+            //txtOperator.Properties.DataSource = DTSource;
             //if (Common.DataIsNULL.Isnull(Common.UserINIAndXML.sDataSetID, "") == "")
             //{
             //    txtOperator.EditValue = null;

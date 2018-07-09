@@ -7,7 +7,6 @@ using System.Text;
 using System.Linq;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
-using YIEternalMIS.BLL;
 using YIEternalMIS.Common;
 
 namespace YIEternalMIS.Library
@@ -42,8 +41,8 @@ namespace YIEternalMIS.Library
         /// </summary>
         public  void UserInit()
         {
-            sdate.DateTime = Convertto.ToNotNULLDateTime(MyDateTimeHelper.GetFirstDayOfMonth(0, YIEDoFun.DoGetServerDateTime()));
-            edate.DateTime = Convertto.ToNotNULLDateTime( MyDateTimeHelper.GetLastDayOfMonth(1, YIEDoFun.DoGetServerDateTime()));
+            sdate.DateTime = Convertto.ToNotNULLDateTime(MyDateTimeHelper.GetFirstDayOfMonth(0, DateTime.Now));
+            edate.DateTime = Convertto.ToNotNULLDateTime( MyDateTimeHelper.GetLastDayOfMonth(1, DateTime.Now));
 
             btnClose.Click += new EventHandler(btnClose_Click);
         }

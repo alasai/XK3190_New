@@ -81,12 +81,12 @@ namespace YIEternalMIS.SystemModule
         /// <param name="Edate"></param>
         void SearchData(DateTime sdate, DateTime Edate)
         {
-            IDataGridControlPage IDataPage = new BLL.YIESystemMSG();
-            string sWhere ;
-            sWhere = "MsgRelease >= '" + sdate.ToString() + "' AND MsgRelease <= '" + Edate.ToString() + "'";
+            //IDataGridControlPage IDataPage = new BLL.YIESystemMSG();
+            //string sWhere ;
+            //sWhere = "MsgRelease >= '" + sdate.ToString() + "' AND MsgRelease <= '" + Edate.ToString() + "'";
 
 
-            OnPages.SearchData(gridControl1, IDataPage, sWhere, "");
+            //OnPages.SearchData(gridControl1, IDataPage, sWhere, "");
 
         }
 

@@ -9,9 +9,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using AppService;
 using DevExpress.XtraEditors;
-using Models.Db;
 using Nelibur.ObjectMapper;
 using ReactiveUI;
+using WeightManage.AppService;
+using WeightManage.Models.Db;
 using WeightManage.Module.ViewModel;
 using YIEternalMIS.Common;
 

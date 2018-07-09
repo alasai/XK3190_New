@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using AppService;
+using WeightManage.AppService;
 using YIEternalMIS.Common;
 using YIEternalMIS.Core;
 using YIEternalMIS.Core.SystemCore;
@@ -122,24 +122,24 @@ namespace YIEternalMIS.Main
 
             //设置配置信息
             SqlConfiguration.SetSQLConfig(cfgNormal);
-            Business.LoginAuthorization login = new Business.LoginAuthorization();
+            //Business.LoginAuthorization login = new Business.LoginAuthorization();
 
-            Common.LoginUser LoginUser = new Common.LoginUser(sUserID, sPwd, sBookID, sBooksName);
-            //登录成功
-            if (LoginAuthor(LoginUser, login))
-            {
-                //初始化导航条
-                MenuHelper.InitMenu();
-                DialogResult = System.Windows.Forms.DialogResult.OK;
-                //登录策略
-                SystemAuthentication.Current = login;
-                Common.SystemConfig.CurrentConfig.LoginSave = true;
-                Common.SystemConfig.CurrentConfig.LastLoginPWD = Common.CEncoder.Encode(sPwd);
-                Common.SystemConfig.CurrentConfig.LastLoginUser = sUserID;
-                Common.SystemConfig.WriteSettings(Common.SystemConfig.CurrentConfig);
-                this.Hide();
-                this.Close();
-            }
+            //Common.LoginUser LoginUser = new Common.LoginUser(sUserID, sPwd, sBookID, sBooksName);
+            ////登录成功
+            //if (LoginAuthor(LoginUser, login))
+            //{
+            //    //初始化导航条
+            //    MenuHelper.InitMenu();
+            //    DialogResult = System.Windows.Forms.DialogResult.OK;
+            //    //登录策略
+            //    SystemAuthentication.Current = login;
+            //    Common.SystemConfig.CurrentConfig.LoginSave = true;
+            //    Common.SystemConfig.CurrentConfig.LastLoginPWD = Common.CEncoder.Encode(sPwd);
+            //    Common.SystemConfig.CurrentConfig.LastLoginUser = sUserID;
+            //    Common.SystemConfig.WriteSettings(Common.SystemConfig.CurrentConfig);
+            //    this.Hide();
+            //    this.Close();
+            //}
         }
 
         private void sbtnColse_Click(object sender, EventArgs e)

@@ -9,7 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using AppService;
 using DevExpress.XtraEditors;
-using Models.Db;
+using WeightManage.AppService;
+using WeightManage.Models.Db;
 using YIEternalMIS.Common;
 
 namespace WeightManage.Module.Views.Price

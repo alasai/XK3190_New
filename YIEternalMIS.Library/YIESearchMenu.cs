@@ -7,7 +7,6 @@ using System.Text;
 using System.Linq;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
-using YIEternalMIS.BLL;
 using YIEternalMIS.Common;
 
 namespace YIEternalMIS.Library

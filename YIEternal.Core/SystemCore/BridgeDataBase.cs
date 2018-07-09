@@ -16,7 +16,6 @@ using System.Windows.Forms;
 using YIEternalMIS.Interfaces;
 using YIEternalMIS.Common;
 using YIEternalMIS.Core.SystemCore;
-using YIEternalMIS.DBUtility;
 
 namespace YIEternalMIS.Core
 {
@@ -45,7 +44,7 @@ namespace YIEternalMIS.Core
                     SqlConfiguration.SetSQLConfig(cfgNormal);
                     connected = SqlConfiguration.TestConnection(true);//测试AdoDirect连接       
 
-                DbHelperSQLite.connectionString="Data Source=" + Application.StartupPath + @"\db\HookData.db";
+                PubConstant.SqliteConnstr = "Data Source=" + Application.StartupPath + @"\db\HookData.db";
             }
 
             catch (Exception ex)

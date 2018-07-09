@@ -84,10 +84,6 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="YIEternalMIS.BLL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\libs\refbins\YIEternalMIS.BLL.dll</HintPath>
-    </Reference>
     <Reference Include="YIEternalMIS.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\libs\refbins\YIEternalMIS.Common.dll</HintPath>

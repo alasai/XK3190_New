@@ -20,7 +20,6 @@ using YIEternalMIS.Interfaces;
 using DevExpress.XtraBars.Ribbon;
 using DevExpress.XtraBars;
 using YIEternalMIS.Core.SystemCore;
-using YIEternalMIS.Model;
 
 namespace YIEternalMIS.Business
 {

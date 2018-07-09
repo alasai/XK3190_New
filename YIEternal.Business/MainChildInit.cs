@@ -126,9 +126,9 @@ namespace YIEternalMIS.Business
             DataTable rtnDT = null;
             try
             {
-                string ldtServer = Convertto.ToDateString(BLL.YIEDoFun.DoGetServerDateTime(), "yyyy-MM-dd HH:mm:ss");
-                BLL.YIESystemMSG MSG = new BLL.YIESystemMSG();
-                rtnDT = MSG.GetList(" MSGSdate <= '" + ldtServer + "' AND MSGEdate >= '" + ldtServer + "'").Tables[0];
+                //string ldtServer = Convertto.ToDateString(BLL.YIEDoFun.DoGetServerDateTime(), "yyyy-MM-dd HH:mm:ss");
+                //BLL.YIESystemMSG MSG = new BLL.YIESystemMSG();
+                //rtnDT = MSG.GetList(" MSGSdate <= '" + ldtServer + "' AND MSGEdate >= '" + ldtServer + "'").Tables[0];
             }
             catch{}
 

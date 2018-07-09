@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using AppService;
 using Utils;
+using WeightManage.AppService;
 using YIEternalMIS.Common;
 
 namespace WeightManage.Module.Views.FactoryInfo

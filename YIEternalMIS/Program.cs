@@ -129,7 +129,7 @@ namespace YIEternalMIS
 
             try
             {
-                ldt_ServerDatetime = BLL.YIEDoFun.DoGetServerDateTime();
+                ldt_ServerDatetime =DateTime.Now;
                 TimeSpan ts = ldt_ServerDatetime - DateTime.Now;
                 //如果客户机时间和服务器时间相差2分钟以上，不允许进入系统
                 if (ts.Days > 0 || ts.Hours > 1 || ts.Minutes >= 2)

@@ -10,7 +10,9 @@ using System.Windows.Forms;
 using AppService;
 using gregn6Lib;
 using Models;
-using Models.Dto;
+using WeightManage.AppService;
+using WeightManage.Models;
+using WeightManage.Models.Dto;
 using YIEternalMIS.Base;
 using YIEternalMIS.Common;
 

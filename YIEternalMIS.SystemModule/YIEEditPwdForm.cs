@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using AppService;
 using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.DXErrorProvider;
+using WeightManage.AppService;
 using YIEternalMIS.Common;
 
 

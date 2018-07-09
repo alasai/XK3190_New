@@ -11,6 +11,8 @@ using AppService;
 using AppService.DbContext;
 using gregn6Lib;
 using Models;
+using WeightManage.AppService;
+using WeightManage.Models;
 using YIEternalMIS.Base;
 using YIEternalMIS.Common;
 

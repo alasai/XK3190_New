@@ -93,8 +93,8 @@ namespace YIEternalMIS.Core
 
         public static void SetConnstr( string connstr )
         {
-            DBUtility.PubConstant.ConnectionString = connstr;
-            DBUtility.DbHelperSQL.connectionString = connstr;
+            PubConstant.ConnectionString = connstr;
+            DbHelperSQL.connectionString = connstr;
         }
 
         /// <summary>
@@ -115,8 +115,8 @@ namespace YIEternalMIS.Core
                 //将连接字符串保存到配置文件中
                 if (Constr)
                 {
-                    DBUtility.PubConstant.ConnectionString = conn.ConnectionString;
-                    DBUtility.DbHelperSQL.connectionString = conn.ConnectionString;
+                    PubConstant.ConnectionString = conn.ConnectionString;
+                    DbHelperSQL.connectionString = conn.ConnectionString;
                 }
                 return true;
             }
@@ -148,8 +148,8 @@ namespace YIEternalMIS.Core
                 //将连接字符串保存到配置文件中
             if (Constr)
             {
-                DBUtility.PubConstant.ConnectionString = conn.ConnectionString;
-                DBUtility.DbHelperSQL.connectionString = conn.ConnectionString;
+                PubConstant.ConnectionString = conn.ConnectionString;
+                DbHelperSQL.connectionString = conn.ConnectionString;
             }
                 return true;
             }

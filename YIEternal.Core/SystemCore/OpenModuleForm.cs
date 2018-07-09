@@ -14,7 +14,6 @@ using System.Linq;
 using System.Text;
 using YIEternalMIS.Interfaces;
 using YIEternalMIS.Common;
-using YIEternalMIS.BLL;
 using System.Data;
 using System.Windows.Forms;
 using DevExpress.XtraBars;

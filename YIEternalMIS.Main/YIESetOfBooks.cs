@@ -86,22 +86,22 @@ namespace YIEternalMIS.Main
                 Common.Msg.ShowError("您选择账套服务器测试连接失败!!!");
                 return;
             }
-            Business.LoginAuthorization login = new Business.LoginAuthorization();
+            //Business.LoginAuthorization login = new Business.LoginAuthorization();
 
-            Common.LoginUser LoginUser = new Common.LoginUser(sUserID, sPwd, sBookID, sBooksName);
-            //登录成功
-            if (LoginAuthor(LoginUser, login))
-            {
-                DialogResult = System.Windows.Forms.DialogResult.OK;
-                //登录策略
-                SystemAuthentication.Current = login;
-                Common.SystemConfig.CurrentConfig.LoginSave = true;
-                Common.SystemConfig.CurrentConfig.LastLoginPWD = Common.CEncoder.Encode(sPwd);
-                Common.SystemConfig.CurrentConfig.LastLoginUser = sUserID;
-                Common.SystemConfig.WriteSettings(Common.SystemConfig.CurrentConfig);
-                this.Hide();
-                this.Close();
-            }
+            //Common.LoginUser LoginUser = new Common.LoginUser(sUserID, sPwd, sBookID, sBooksName);
+            ////登录成功
+            //if (LoginAuthor(LoginUser, login))
+            //{
+            //    DialogResult = System.Windows.Forms.DialogResult.OK;
+            //    //登录策略
+            //    SystemAuthentication.Current = login;
+            //    Common.SystemConfig.CurrentConfig.LoginSave = true;
+            //    Common.SystemConfig.CurrentConfig.LastLoginPWD = Common.CEncoder.Encode(sPwd);
+            //    Common.SystemConfig.CurrentConfig.LastLoginUser = sUserID;
+            //    Common.SystemConfig.WriteSettings(Common.SystemConfig.CurrentConfig);
+            //    this.Hide();
+            //    this.Close();
+            //}
 
 
         }
@@ -115,11 +115,11 @@ namespace YIEternalMIS.Main
         {
 
             Common.YIEBookConfig BookCfg = new Common.YIEBookConfig();
-            DataTable ldt = new BLL.tb_DataSet().GetList("DataSetID='" + sbookID + "'" ).Tables[0];
-            BookCfg.Server = ldt.Rows[0]["ServerIP"].ToString();
-            BookCfg.DBName = ldt.Rows[0]["DBName"].ToString();
-            BookCfg.UserID =Common.CEncoder.Decode( ldt.Rows[0]["DBUserName"].ToString());
-            BookCfg.PWD = Common.CEncoder.Decode( ldt.Rows[0]["DBUserPassword"].ToString());
+            //DataTable ldt = new BLL.tb_DataSet().GetList("DataSetID='" + sbookID + "'" ).Tables[0];
+            //BookCfg.Server = ldt.Rows[0]["ServerIP"].ToString();
+            //BookCfg.DBName = ldt.Rows[0]["DBName"].ToString();
+            //BookCfg.UserID =Common.CEncoder.Decode( ldt.Rows[0]["DBUserName"].ToString());
+            //BookCfg.PWD = Common.CEncoder.Decode( ldt.Rows[0]["DBUserPassword"].ToString());
             return Core.SqlConfiguration.TestConnection(BookCfg, bSave);
         }
 

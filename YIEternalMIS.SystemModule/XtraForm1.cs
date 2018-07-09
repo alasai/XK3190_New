@@ -71,11 +71,11 @@ namespace YIEternalMIS.SystemModule
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            IDataGridControlPage iDATA = new BLL.V_YIEBtnRolePER();
-            string swhere, sorder;
-            swhere = "";
-            sorder = "";
-            yieOnPage1.SearchData(gridControl1, iDATA, swhere, sorder);
+            //IDataGridControlPage iDATA = new BLL.V_YIEBtnRolePER();
+            //string swhere, sorder;
+            //swhere = "";
+            //sorder = "";
+            //yieOnPage1.SearchData(gridControl1, iDATA, swhere, sorder);
             
         }
     }
