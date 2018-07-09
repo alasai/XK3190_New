@@ -41,5 +41,33 @@ namespace AppService
 
             return userer;
         }
+
+        public string UpdatePwd(string uname, string oldPwd, string newPwd)
+        {
+            try
+            {
+                string encodePwd = CEncoder.Encode(oldPwd);
+                using (var sql=SugarDbContext.GetInstance())
+                {
+                    var id = sql.Queryable<Opers>().Where(s => s.userName == uname && s.password == encodePwd)
+                        .Select(s => s.Id).First();
+                    if (id == 0)
+                    {
+                        return "原始密码错误!!!";
+                    }
+                   string newEncodePwd= CEncoder.Encode(newPwd);
+
+                    sql.Updateable<Opers>().UpdateColumns(s => new Opers() {password = newEncodePwd})
+                        .Where(s => s.Id == id).ExecuteCommand();
+                }
+            }
+            catch (Exception ex)
+            {
+               LogNHelper.Exception(ex);
+                return "密码修改失败!!!";
+            }
+
+            return string.Empty;
+        }
     }
 }

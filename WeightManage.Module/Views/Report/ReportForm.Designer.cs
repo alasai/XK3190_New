@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReportForm));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             this.axGRDisplayViewer1 = new Axgregn6Lib.AxGRDisplayViewer();
             this.Num = new DevExpress.XtraGrid.Columns.GridColumn();
             this.PIN = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -71,7 +71,7 @@
             this.axGRDisplayViewer1.Location = new System.Drawing.Point(355, 576);
             this.axGRDisplayViewer1.Name = "axGRDisplayViewer1";
             this.axGRDisplayViewer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axGRDisplayViewer1.OcxState")));
-            this.axGRDisplayViewer1.Size = new System.Drawing.Size(192, 90);
+            this.axGRDisplayViewer1.Size = new System.Drawing.Size(192, 192);
             this.axGRDisplayViewer1.TabIndex = 0;
             // 
             // Num
@@ -79,6 +79,7 @@
             this.Num.Caption = "数量";
             this.Num.FieldName = "Num";
             this.Num.Name = "Num";
+            this.Num.OptionsColumn.AllowEdit = false;
             this.Num.Visible = true;
             this.Num.VisibleIndex = 3;
             this.Num.Width = 232;
@@ -88,6 +89,7 @@
             this.PIN.Caption = "身份证";
             this.PIN.FieldName = "PIN";
             this.PIN.Name = "PIN";
+            this.PIN.OptionsColumn.AllowEdit = false;
             this.PIN.Visible = true;
             this.PIN.VisibleIndex = 2;
             this.PIN.Width = 232;
@@ -97,6 +99,7 @@
             this.hostName.Caption = "送宰人";
             this.hostName.FieldName = "hostName";
             this.hostName.Name = "hostName";
+            this.hostName.OptionsColumn.AllowEdit = false;
             this.hostName.Visible = true;
             this.hostName.VisibleIndex = 1;
             this.hostName.Width = 150;
@@ -106,6 +109,7 @@
             this.batchId.Caption = "批次号";
             this.batchId.FieldName = "batchId";
             this.batchId.Name = "batchId";
+            this.batchId.OptionsColumn.AllowEdit = false;
             this.batchId.Visible = true;
             this.batchId.VisibleIndex = 0;
             this.batchId.Width = 100;
@@ -135,6 +139,7 @@
             this.weighingBeginTime.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.weighingBeginTime.FieldName = "weighingBeginTime";
             this.weighingBeginTime.Name = "weighingBeginTime";
+            this.weighingBeginTime.OptionsColumn.AllowEdit = false;
             this.weighingBeginTime.Visible = true;
             this.weighingBeginTime.VisibleIndex = 4;
             this.weighingBeginTime.Width = 295;
@@ -153,7 +158,7 @@
             // 
             this.repositoryItemButtonEdit1.AutoHeight = false;
             this.repositoryItemButtonEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "打印", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("repositoryItemButtonEdit1.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "打印", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("repositoryItemButtonEdit1.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
             this.repositoryItemButtonEdit1.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.repositoryItemButtonEdit1.Name = "repositoryItemButtonEdit1";
             this.repositoryItemButtonEdit1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;

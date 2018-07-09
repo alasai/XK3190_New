@@ -121,7 +121,7 @@ namespace WeightManage.Module
             {
                 //称重串口
                 _electronicScale = new ElectronicScale();
-                _electronicScale.InitScale("COM3", SerialPortBaudRates.BaudRate_9600, Parity.None, SerialPortDatabits.EightBits, StopBits.One,10,2.2M,0.1M);
+                _electronicScale.InitScale(SerialPortConfig.WeightPort, SerialPortBaudRates.BaudRate_9600, Parity.None, SerialPortDatabits.EightBits, StopBits.One,10,2.2M,0.1M);
                 _electronicScale.DataReceived += new WeightReceivedEventHandler(serialWeight_DataReceived);
                 if (!_electronicScale.IsOpen)
                 {
@@ -136,7 +136,7 @@ namespace WeightManage.Module
             try
             {
                 //读钩标
-                _device = new PTDevice("COM1", string.Empty);
+                _device = new PTDevice(SerialPortConfig.WeightHookPort, string.Empty);
                 if (_device.Open())
                 {
                     _device.TTFMonitor.Start(this);
@@ -147,7 +147,7 @@ namespace WeightManage.Module
                     Msg.ShowError("感应器连接失败");
                 }
             }
-            //catch (DeviceException ex)
+            //catch (DeviceException ex) 
             //{
             //    log4netHelper.Exception(ex);
             //}
@@ -160,7 +160,7 @@ namespace WeightManage.Module
             //去头
             try
             {
-                _earDevice = new PTDevice("COM2", string.Empty);
+                _earDevice = new PTDevice(SerialPortConfig.HeadHookPort, string.Empty);
                 if (_earDevice.Open())
                 {
                     _earDevice.TTFMonitor.Start(this);
@@ -618,7 +618,7 @@ namespace WeightManage.Module
         /// <param name="e"></param>
         private void btnSerialPort_Click(object sender, EventArgs e)
         {
-
+            Msg.ShowInformation(SerialPortConfig.WeightPort);
         }
         /// <summary>
         /// 毛重设置

@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Linq;
 using System.Windows.Forms;
+using AppService;
 using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.DXErrorProvider;
 using YIEternalMIS.Common;
@@ -37,13 +38,25 @@ namespace YIEternalMIS.SystemModule
             editpwd();
         }
 
+        private LoginAppService _loginApp=new LoginAppService();
         void editpwd()
         {
             if (!InitValidationRules()) return;
-            YIEternalMIS.Interfaces.ILoginAuthorization login = new Business.LoginAuthorization();
-            login.EditPwd(new LoginUser(Loginer.CurrentUser.Account, told.Text, Loginer.CurrentUser.DataSetID, Loginer.CurrentUser.DataSetName), tnew.Text);
-
-            
+      
+          string msg=  _loginApp.UpdatePwd(Loginer.CurrentUser.Account.Trim(), told.Text.Trim(), tnew.Text.Trim());
+            if (string.IsNullOrEmpty(msg))
+            {
+                if (SystemConfig.CurrentConfig.LoginSave)
+                {
+                    Common.SystemConfig.CurrentConfig.LastLoginPWD = CEncoder.Encode(tnew.Text.Trim());
+                    Common.SystemConfig.WriteSettings(Common.SystemConfig.CurrentConfig);
+                }
+                Msg.ShowInformation("密码修改成功");
+            }
+            else
+            {
+               Msg.ShowError(msg);
+            }
         }
 
 

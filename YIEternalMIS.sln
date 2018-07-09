@@ -31,9 +31,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBUtility", "DBUtility\DBUt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YIEternalMIS.Tools.SqlConnector", "YIEternalMIS.Tools.SqlConnector\YIEternalMIS.Tools.SqlConnector.csproj", "{B9D9795D-24C1-4D38-8DE5-A7A4C10FF24D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppService", "AppService\AppService.csproj", "{22EDACAC-530E-4383-89CB-FC8CEB4916ED}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeightManage.AppService", "AppService\WeightManage.AppService.csproj", "{22EDACAC-530E-4383-89CB-FC8CEB4916ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{9D0568A9-A3F3-4AB6-A4A1-CD06FCE731CE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeightManage.Models", "Models\WeightManage.Models.csproj", "{9D0568A9-A3F3-4AB6-A4A1-CD06FCE731CE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01-基础类库", "01-基础类库", "{9CE58834-8D36-43B4-9F24-0224D95FB12F}"
 EndProject
@@ -45,7 +45,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03-系统模块", "03-系�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeightManage.Module", "WeightManage.Module\WeightManage.Module.csproj", "{E758C074-E3B5-4B7C-A400-B890E7E0AE0B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utils", "Utils\Utils.csproj", "{FAF834AA-2D6F-40DD-A0CD-C0E771AA3448}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeightManage.Utils", "Utils\WeightManage.Utils.csproj", "{FAF834AA-2D6F-40DD-A0CD-C0E771AA3448}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Module", "Test.Module\Test.Module.csproj", "{0A1CDB30-7BE7-437F-A28F-09CB63040E04}"
 EndProject

@@ -276,17 +276,17 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AppService\AppService.csproj">
+    <ProjectReference Include="..\AppService\WeightManage.AppService.csproj">
       <Project>{22edacac-530e-4383-89cb-fc8ceb4916ed}</Project>
-      <Name>AppService</Name>
+      <Name>WeightManage.AppService</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Models\Models.csproj">
+    <ProjectReference Include="..\Models\WeightManage.Models.csproj">
       <Project>{9d0568a9-a3f3-4ab6-a4a1-cd06fce731ce}</Project>
-      <Name>Models</Name>
+      <Name>WeightManage.Models</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Utils\Utils.csproj">
+    <ProjectReference Include="..\Utils\WeightManage.Utils.csproj">
       <Project>{faf834aa-2d6f-40dd-a0cd-c0e771aa3448}</Project>
-      <Name>Utils</Name>
+      <Name>WeightManage.Utils</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

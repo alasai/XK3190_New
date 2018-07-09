@@ -86,16 +86,19 @@ namespace WeightManage.Module.Views
                 Msg.Warning("服务器地址不能为空");
                 return;
             }
-
-            ViewModel.hookWeight = decimal.Round(ViewModel.hooksWeight / ViewModel.hookCount, 2);
-            var model = TinyMapper.Map<Params>(ViewModel);
-            var ret = _factoryApp.SaveParam(model);
-            if (ret)
+            if (Msg.AskQuestion("确定修改系统参数？"))
             {
-                DialogResult = System.Windows.Forms.DialogResult.OK;
-                //this.Hide();
-                this.Close();
+                ViewModel.hookWeight = decimal.Round(ViewModel.hooksWeight / ViewModel.hookCount, 2);
+                var model = TinyMapper.Map<Params>(ViewModel);
+                var ret = _factoryApp.SaveParam(model);
+                if (ret)
+                {
+                    DialogResult = System.Windows.Forms.DialogResult.OK;
+                    //this.Hide();
+                    this.Close();
+                }
             }
+           
         }
 
         private void btnBack_Click(object sender, EventArgs e)

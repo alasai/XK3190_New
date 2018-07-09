@@ -21,7 +21,7 @@ namespace WeightManage.Module.Views
         public ReportForm()
         {
             InitializeComponent();
-            batchId.OptionsColumn.AllowEdit = false;
+            //batchId.OptionsColumn.AllowEdit = false;
         }
         private ReportAppService _reportApp=new ReportAppService();
         BindingList<WeightBatchDto> _weightGrid = new BindingList<WeightBatchDto>();
@@ -77,10 +77,10 @@ namespace WeightManage.Module.Views
         private void repositoryItemButtonEdit1_Click(object sender, EventArgs e)
         {
             var model = (WeightBatchDto)gridView1.GetFocusedRow();
-            Msg.ShowInformation(model.batchId);
+            // Msg.ShowInformation(model.batchId);
 
-            var list = _reportApp.GetWeightReport(model.batchId.Trim());
-            if (list.Any())
+            _reportList = _reportApp.GetWeightReport(model);
+            if (_reportList.Any())
             {
                 Report.PrintPreview(true);
             }
@@ -107,32 +107,27 @@ namespace WeightManage.Module.Views
 
             try
             {
-                if (_reportList.Any())
+                var title = Report.ControlByName("SubTitleBox");
+                title.AsStaticBox.Text = "统计时间:" + DateTime.Now;
+                int tempsort = 1;
+
+                int count = _reportList.Count;
+                for (int i = 0; i < count; i++)
                 {
-
-                    var title = Report.ControlByName("SubTitleBox");
-                    title.AsStaticBox.Text = "统计时间:" + DateTime.Now;
-                    int tempsort = 1;
-
-                    int count = _reportList.Count;
-                    for (int i = 0; i < count; i++)
-                    {
-                        var model = _reportList[i];
-                        Report.DetailGrid.Recordset.Append();
-                        field1.Value = tempsort;
-                        field2.Value = model.IdNumber;
-                        field3.Value = model.ProductName;
-                        field4.Value = model.MaoWeight;
-                        field5.Value = model.PiWeight;
-                        field6.Value = model.NetWeight;
-                        field7.Value = model.Num;
-                        field8.Value = model.Price;
-                        field9.Value = model.TotalPrice;
-                        field10.Value = model.WeightTime;
-                        Report.DetailGrid.Recordset.Post();
-                        tempsort++;
-                    }
-
+                    var model = _reportList[i];
+                    Report.DetailGrid.Recordset.Append();
+                    field1.Value = tempsort;
+                    field2.Value = model.IdNumber;
+                    field3.Value = model.ProductName;
+                    field4.Value = model.MaoWeight;
+                    field5.Value = model.PiWeight;
+                    field6.Value = model.NetWeight;
+                    field7.Value = model.Num;
+                    field8.Value = model.Price;
+                    field9.Value = model.TotalPrice;
+                    field10.Value = model.WeightTime;
+                    Report.DetailGrid.Recordset.Post();
+                    tempsort++;
                 }
             }
             catch (Exception ex)

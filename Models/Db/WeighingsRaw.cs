@@ -13,6 +13,6 @@ namespace Models.Db
         public decimal hookWeights { get; set; }
         public DateTime weighingTime { get; set; }
         public string productName { get; set; }
-        public decimal? ProductPrice { get; set; }
+        public decimal ProductPrice { get; set; }
     }
 }

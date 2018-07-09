@@ -15,6 +15,7 @@ using System.Text;
 using System.Windows.Forms;
 using YIEternalMIS.Interfaces;
 using YIEternalMIS.Common;
+using YIEternalMIS.Core.SystemCore;
 using YIEternalMIS.DBUtility;
 
 namespace YIEternalMIS.Core
@@ -33,11 +34,13 @@ namespace YIEternalMIS.Core
 
             try
             {
-               
 
+                  string iniFilePath = Application.StartupPath + SqlConfiguration.INI_CFG_PATH;
                     //生产环境连接配置
-                    IWriteSQLConfigValue cfgNormal = new INIFileWriter(Application.StartupPath + SqlConfiguration.INI_CFG_PATH);
-
+                    IWriteSQLConfigValue cfgNormal = new INIFileWriter(iniFilePath);
+                      //串口设置
+                     SerialPortConfig.IniFile = iniFilePath;
+                    SerialPortConfig.Read();
                     //设置配置信息
                     SqlConfiguration.SetSQLConfig(cfgNormal);
                     connected = SqlConfiguration.TestConnection(true);//测试AdoDirect连接       
